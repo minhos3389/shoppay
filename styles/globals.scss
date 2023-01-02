@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+  &:before,
+  &:after {
+    box-sizing: border-box;
+  }
+}
+body {
+  font-family: sans-serif;
+  // browser have different line-height, so it's the best. 150%.
+  line-height: 1.5;
+  // sharpen the edges of the fonts to make it look the best.
+  -webkit-font-smoothing: antialiased;
+}
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // whenever we feel like this space is not enough, we want to break the text, then need it.
+  overflow-wrap: break-word;
+}
+img,
+video,
+canvas,
+svg {
+  // when image is large and it's taken the whole space,
+  // whenever we add an image or a video or any canvas or svg, we want to simply
+  // just take inside that element and doesn't overflow it.
+  max-width: 100%;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul {
+  // delete list-style, and they have default margin, padding so delete it.
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+button {
+  border: none;
+  outline: none;
+}
